@@ -1,0 +1,472 @@
+/* Stili base */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../images/LOGO\ _LOGO\ 2\ BLU.svg') no-repeat center center fixed,
+    linear-gradient(180deg, #ffffff, rgba(244, 96, 54, 0.5), #ffffff) no-repeat center center fixed; 
+    background-size: contain; /* Adatta l'immagine allo schermo */    color: #fff;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.logo img {
+    width: 9em; /* Larghezza dell'immagine */
+    height: auto; /* Mantiene le proporzioni */
+    display: block; /* Evita margini indesiderati */
+    margin: 0 auto; /* Centra l'immagine nel contenitore */
+}
+
+/* Header */
+header {
+    color: white;
+    text-align: center;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba();
+    height: 100px; /* Altezza precisa */
+}
+
+/* Navbar fissa */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(); /* Sfondo semi-trasparente */
+    position: sticky; /* Sempre in cima */
+    top: 0;
+    width: 95%;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba();
+    transition: background 0.3s ease; /* Transizione per lo sfondo */
+}
+
+nav .logo {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    font-family: 'ethnocentricrgit', sans-serif; /* Usa il font personalizzato */
+    text-transform: uppercase; /* Esempio per rendere il testo maiuscolo */
+    letter-spacing: 2px; /* Aggiunge spazio tra le lettere */
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav .nav-links li a {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    color: #F46036;
+    font-family: 'ethnocentricrgit', sans-serif; /* Usa il font personalizzato */
+    text-transform: uppercase; /* Esempio per rendere il testo maiuscolo */
+    letter-spacing: 2px; /* Aggiunge spazio tra le lettere */
+}
+
+nav .nav-links li a:hover {
+    color: #0041de; 
+}
+
+nav .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+/* Fix per l'offset del header */
+section:target {
+    scroll-margin-top: 70px; /* Offset per evitare che il contenuto venga coperto dall'header */
+}
+
+/* Hero Text */
+.hero-text {
+    text-align: center;
+    padding: 80px;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    font-family: 'ethnocentricrgit', sans-serif;
+}
+
+.hero-text p {
+    position: relative; /* Sposta solo il paragrafo */
+    top: -260px; /* Sposta il paragrafo verso il basso di 30px */
+    font-size: 1.5em;
+    color: #0041de;
+    font-family: 'ethnocentricrgit', sans-serif; /* Usa il font personalizzato */
+    text-transform: uppercase; /* Esempio per rendere il testo maiuscolo */
+    letter-spacing: 2px; /* Aggiunge spazio tra le lettere */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Sezioni */
+section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'ethnocentricrgit';
+    src: url('../fonts/ethnocentricrgit.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Chi siamo */
+#chi-sono h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #F46036;
+    font-family: 'ethnocentricrgit', sans-serif; /* Usa il font personalizzato */
+    text-transform: uppercase; /* Esempio per rendere il testo maiuscolo */
+    letter-spacing: 2px; /* Aggiunge spazio tra le lettere */
+}
+
+#chi-sono h2:hover {
+    color: #F46036;
+}
+
+#chi-sono p {
+    color: #ccc;
+    font-size: 1em;
+}
+
+#chi-sono .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#chi-sono .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#chi-sono .card {
+    background: #1f242d;
+    border: 1px solid #0041de;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 30%;
+    min-width: 250px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#chi-sono .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#chi-sono .card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #0041de;
+}
+
+#chi-sono .card h3:hover {
+    color: #F46036;
+}
+
+#schi-sono .card p {
+    color: #ccc;
+    font-size: 1em;
+}
+
+/* Servizi */
+#servizi h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #F46036;
+    font-family: 'ethnocentricrgit', sans-serif; /* Usa il font personalizzato */
+    text-transform: uppercase; /* Esempio per rendere il testo maiuscolo */
+    letter-spacing: 2px; /* Aggiunge spazio tra le lettere */
+}
+
+#servizi h2:hover {
+    color: #F46036;
+}
+
+#servizi .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#servizi .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#servizi .card {
+    background: #1f242d;
+    border: 1px solid #0041de;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 30%;
+    min-width: 250px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#servizi .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#servizi .card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #0041de;
+}
+
+#servizi .card h3:hover {
+    color: #F46036;
+}
+
+#servizi .card p {
+    color: #ccc;
+    font-size: 1em;
+}
+
+/* Stile per il pulsante */
+.card-button {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    display: inline-block; /* Permette di trattarlo come pulsante */
+    text-align: center; /* Centra il testo */
+    padding: 10px 15px; /* Spaziatura interna */
+    background-color: rgb(); /* Colore di sfondo */
+    color: white; /* Colore del testo */
+    border-radius: 5px; /* Angoli arrotondati */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Effetti hover */
+}
+
+.card-button:hover {
+    background-color: rgb(); /* Cambia il colore al passaggio del mouse */
+    transform: scale(1.05); /* Leggero ingrandimento al passaggio del mouse */
+}
+
+/* Stile del titolo dentro il pulsante */
+.card-button h3 {
+    margin: 0; /* Rimuove margini interni */
+    font-size: 1.5em; /* Regola la dimensione del font */
+    color: inherit; /* Mantiene il colore del pulsante */
+    display: inline; /* Rende il titolo compatibile col link */
+}
+
+#galleria h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #F46036;
+    font-family: 'ethnocentricrgit', sans-serif; /* Usa il font personalizzato */
+    text-transform: uppercase; /* Esempio per rendere il testo maiuscolo */
+    letter-spacing: 2px; /* Aggiunge spazio tra le lettere */
+}
+
+#galleria h2:hover {
+    color: #F46036;
+}
+
+/* Galleria */
+#galleria .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#galleria .gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #0041de;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#galleria .gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Contatti */
+#contatti {
+    background: #1f242d;
+    padding: 40px 0;
+    border-top: 2px solid #F46036;
+}
+
+#contatti h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #F46036;
+    font-family: 'ethnocentricrgit', sans-serif; /* Usa il font personalizzato */
+    text-transform: uppercase; /* Esempio per rendere il testo maiuscolo */
+    letter-spacing: 2px; /* Aggiunge spazio tra le lettere */
+}
+
+#contatti h2:hover {
+    color: #F46036;
+}
+
+#contatti a {
+    color: #F46036;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#contatti a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #0d1117;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer p a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #1c1f26;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+
+    .hero-text {
+        padding: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    #servizi .card {
+        width: 90%;
+    }
+}
+
+/* PAGINA SERVIZI STAMPA 3D */
+#stampa-3d {
+    padding: 40px 20px;
+    background: rgb();
+    text-align: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+#stampa-3d h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #F46036;
+    font-family: 'ethnocentricrgit', sans-serif; /* Usa il font personalizzato */
+    text-transform: uppercase; /* Esempio per rendere il testo maiuscolo */
+    letter-spacing: 2px; /* Aggiunge spazio tra le lettere */
+}
+
+#stampa-3d h2:hover {
+    color: #F46036;
+}
+
+#stampa-3d p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+#stampa-3d ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#stampa-3d ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+#stampa-3d ul li::before {
+    content: '✔';
+    color: #F46036;
+    position: absolute;
+    left: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
