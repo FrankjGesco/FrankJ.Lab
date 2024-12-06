@@ -33,7 +33,7 @@ header {
     display: none;
     font-size: 1.5rem;
     background: none;
-    color: white;
+    color: #ff7e5f;
     border: none;
     cursor: pointer;
 }
@@ -74,15 +74,33 @@ header {
     font-size: 1.5rem;
 }
 
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(255, 127, 95, 0.5);
+}
+
 /* Sezioni */
 .section {
-    padding: 50px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .section h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .card {
@@ -119,13 +137,14 @@ header {
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Footer */
 footer {
-    background: rgba(0, 0, 0, 0.9);
+    background: linear-gradient(135deg, #004e92, #000428);
+    color: white;
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
@@ -144,19 +163,4 @@ footer {
         border-radius: 5px;
     }
 
-    .navbar .nav-links.active {
-        display: flex;
-    }
-
-    .navbar .hamburger {
-        display: block;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-text p {
-        font-size: 1.2rem;
-    }
-}
+    .navbar
