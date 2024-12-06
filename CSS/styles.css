@@ -1,136 +1,147 @@
-/* Stile base */
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset base */
+* {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #000428, #004e92);
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #000428, #004e92); /* Sfondo gradiente elegante */
+    font-family: 'Arial', sans-serif;
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Header e Navbar */
-header {
-    position: relative;
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+/* Sfondo con logo */
+.background-svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background: url('./images/LOGO _LOGO 2 BIANCO.svg') no-repeat center center;
+    background-size: contain;
+    opacity: 0.05;
+    z-index: -1;
 }
 
-.navbar {
+/* Header */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.navbar .logo img {
-    width: 120px; /* Ridotto per una navbar più compatta */
+.logo-container .logo {
+    width: 150px;
 }
 
-.navbar .hamburger {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    color: #ff7e5f;
-    border: none;
-    cursor: pointer;
-}
-
-.navbar .nav-links {
+.nav-links {
     display: flex;
     list-style: none;
-    gap: 15px; /* Distanze uniformi tra i link */
+    gap: 20px;
 }
 
-.navbar .nav-links li {
-    margin: 0;
-}
-
-.navbar .nav-links a {
+.nav-links a {
     text-decoration: none;
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
 }
 
-.navbar .nav-links a:hover {
+.nav-links a:hover {
     background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
-/* Hero Section */
-.hero-text {
+/* Sezione Chi Siamo */
+#chi-siamo {
     text-align: center;
     padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(0, 78, 146, 0.9), rgba(0, 4, 40, 0.9));
 }
 
-.hero-text h1 {
-    font-size: 3rem;
+#chi-siamo h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.hero-text p {
-    font-size: 1.5rem;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    color: white;
+#chi-siamo p {
     font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.cta-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(255, 127, 95, 0.5);
-}
-
-/* Sezioni */
-.section {
-    padding: 80px 20px;
+/* Sezione Servizi */
+#servizi {
     text-align: center;
+    padding: 60px 20px;
 }
 
-.section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+.service-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    margin: 10px 0;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-.card-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.card i {
+    font-size: 2.5rem;
+    color: #ff7e5f;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+/* Sezione Contatti */
+#contatti {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#contatti a {
+    color: #ff7e5f;
+    text-decoration: none;
+}
+
+#contatti a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, #004e92, #000428);
-    color: white;
     text-align: center;
     padding: 20px;
-    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
 }
 
 footer a {
@@ -140,53 +151,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* Responsività */
-@media (max-width: 768px) {
-    .navbar .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    .navbar .nav-links.active {
-        display: flex;
-    }
-
-    .navbar .hamburger {
-        display: block;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-text p {
-        font-size: 1.2rem;
-    }
-}
-
-/* Media Query per schermi molto grandi */
-@media (min-width: 1200px) {
-    .hero-text h1 {
-        font-size: 4rem;
-    }
-
-    .hero-text p {
-        font-size: 1.8rem;
-    }
-
-    .section h2 {
-        font-size: 3rem;
-    }
-
-    .card {
-        padding: 30px;
-    }
 }
