@@ -4,70 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrankJ.Lab</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Sfondo con il logo -->
-    <div class="background-svg"></div>
-
-    <!-- Header -->
     <header>
-        <div class="logo-container">
-            <img src="images/LOGO _LOGOTIPO BIANCO.svg" alt="Logo FrankJ.Lab" class="logo">
-        </div>
         <nav>
+            <div class="logo">
+                <a href="index.html">
+                <img src="images/LOGO _LOGO ARANCIONE.svg" alt="Logo" />
+            </a>
+            </div>
+            <button class="hamburger" aria-label="Apri menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
-                <li><a href="#chi-siamo">Chi Siamo</a></li>
+                <li><a href="#chi-sono">Chi siamo</a></li>
                 <li><a href="#servizi">Servizi</a></li>
+                <li><a href="#galleria">Galleria</a></li>
                 <li><a href="#contatti">Contatti</a></li>
-                <li><a href="https://www.instagram.com/frankj.lab" target="_blank">Instagram</a></li>
             </ul>
         </nav>
+        <div class="hero-text">
+            <h1 style="font-family: 'Ethnocentric Rg It', sans-serif;"></h1>
+            <p>Stampa 3D | Scansioni 3D | Oggetti personalizzati per Simracing</p>
+        </div>
     </header>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Sezione Chi Siamo -->
-        <section id="chi-siamo">
-            <h1>Benvenuto su FrankJ.Lab</h1>
-            <p>Design, Tecnologia e Innovazione per la stampa 3D e molto altro. Scopri come possiamo aiutarti a realizzare le tue idee.</p>
-        </section>
-
-        <!-- Sezione Servizi -->
-        <section id="servizi">
-            <h2>I Nostri Servizi</h2>
-            <div class="service-cards">
-                <div class="card">
-                    <i class="fas fa-print"></i>
-                    <h3>Stampa 3D</h3>
-                    <p>Realizziamo modelli 3D personalizzati con precisione e qualità eccellente.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-qrcode"></i>
-                    <h3>Scansione 3D</h3>
-                    <p>Digitalizziamo oggetti fisici in modelli 3D dettagliati e accurati.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-gamepad"></i>
-                    <h3>Sim Racing</h3>
-                    <p>Produciamo accessori personalizzati per il tuo simulatore di guida.</p>
-                </div>
+    
+    <section id="chi-sono">
+        <div class="container">
+            <h2>Chi siamo</h2>
+            <div class="card">
+            <p>Benvenuto su <strong>FrankJ.Lab</strong>, il laboratorio creativo per tutte le tue esigenze di stampa 3D, scansioni 3D, e design di oggetti unici per il simracing. Uniamo tecnologia e creatività per trasformare le tue idee in realtà!</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Sezione Contatti -->
-        <section id="contatti">
-            <h2>Contattaci</h2>
+    <section id="servizi">
+        <div class="container">
+            <h2>Servizi</h2>
+            <div class="card">
+                <a href="#stampa-3d" class="card-button">
+                    <h3><i class="fas fa-print"></i> Stampa 3D</h3>
+                </a>
+                <p>Modelli personalizzati per ogni esigenza, dai prototipi agli accessori funzionali.</p>
+            </div>
+            <div class="card">
+                <a href="#scansioni-3d" class="card-button">
+                    <h3><i class="fas fa-qrcode"></i> Scansioni 3D</h3>
+                </a>
+                <p>Riproduzioni digitali precise per restauri, analisi o design personalizzati.</p>
+            </div>
+            <div class="card">
+                <a href="#simracing" class="card-button">
+                    <h3><i class="fas fa-gamepad"></i> Simracing</h3>
+                </a>
+                <p>Oggetti su misura per il tuo cockpit, dal comfort alle prestazioni.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="galleria">
+        <div class="container">
+            <h2>Galleria</h2>
+            <div class="gallery">
+                <img src="galleria/Oggetti Avanzati.jpeg" alt="Stampa 3D personalizzata">
+                <img src="galleria/Oggetti creativi.jpeg" alt="Scansione 3D di un oggetto">
+                <img src="galleria/Simracing.jpeg" alt="Accessori per simracing">
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti">
+        <div class="container">
+            <h2>Contatti</h2>
             <p>Email: <a href="mailto:frankjlab3dservice@gmail.com">frankjlab3dservice@gmail.com</a></p>
-            <p>Seguici su Instagram: <a href="https://www.instagram.com/frankj.lab" target="_blank">@frankj.lab</a></p>
-        </section>
-    </main>
+            <p>Seguici su: 
+                <a href="https://www.instagram.com/frankj.lab" target="_blank">Instagram</a>
+            </p>
+        </div>
+    </section>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 FrankJ.Lab. Tutti i diritti riservati. <a href="#chi-siamo">Torna su</a></p>
+        <p></p>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
